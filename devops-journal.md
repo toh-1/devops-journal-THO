@@ -74,6 +74,9 @@ I had trouble seeing the folders in VS Code until I navigated and opened the cor
 
 I also had an issue with opening VS Code using code . but fixed it.
 
+- I originally meant to only commit `devops-journal.md` but ended up pushing the full `practice-project` folder too.
+
+I learned how `git add .` adds everything, and next time I’ll use `git add filename` if I want more control. It still worked, and now I understand the Git workflow better!
 
 Notes to My Future Self
 Always double-check you're in the correct directory using pwd.
