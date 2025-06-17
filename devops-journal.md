@@ -21,6 +21,7 @@ pwd         # Show current directory
 ls          # List files/folders
 cd ~        # Go to home directory
 
+
 ### 🧠 Quiz Reflections
 
 Q1: What does DevOps stand for?
@@ -42,3 +43,43 @@ Don’t forget to save .md files before running git add, or Git won’t detect c
 Practice basic terminal commands every day to stay sharp.
 
 Be patient with setup — even mistakes are part of becoming skilled!
+
+
+---
+
+## 📅 Day 2: File and Directory Management Practice (June 17, 2025)
+
+### ⌨️ Commands Practiced
+```bash
+mkdir practice-project
+cd practice-project
+mkdir scripts logs configs
+touch README.md
+touch scripts/start.sh
+touch logs/debug.log
+touch configs/settings.yaml
+
+🧠 Quiz Reflections
+Q: Why do we use mkdir?
+
+A: To create a directory (folder) in Linux.
+
+Q: What does touch do?
+
+A: It creates a blank file or updates the timestamp of an existing file.
+
+
+🔍 Challenges / Confusions
+I had trouble seeing the folders in VS Code until I navigated and opened the correct folder.
+
+I also had an issue with opening VS Code using code . but fixed it.
+
+
+Notes to My Future Self
+Always double-check you're in the correct directory using pwd.
+
+Don’t panic if files don’t show up — use VS Code’s File → Open Folder to fix it.
+
+Use ls to list files and confirm your structure.
+
+Be patient — everything is learnable!
