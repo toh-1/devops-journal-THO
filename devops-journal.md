@@ -167,3 +167,44 @@ Don’t rush through terminal navigation — it’s the foundation of DevOps!
 git add devops-journal.md
 git commit -m "Day 3 journal entry"
 git push
+
+
+ DevOps Journal – Day 4 (June 19, 2025)
+✅ What I Learned Today
+
+I learned how to write and run a shell script using bash.
+
+I understood how the script file is not a folder, and that you can’t cd into it — it must be run with ./filename.sh.
+
+I used the echo command to print messages in the terminal.
+
+I learned how to use >> to append to a log file and how file paths like ../logs/debug.log work.
+
+⌨️ Commands Practiced
+
+cd scripts/
+./start.sh
+cat ../logs/debug.log
+echo "Started at: $(date)" >> ../logs/debug.log
+code start.sh
+
+ Quiz Reflection
+Q: What’s the purpose of >> in Bash scripting?
+A: It appends output to an existing file without overwriting it.
+
+Q: Why can’t we cd start.sh?
+A: Because it’s a file, not a directory. We use ./start.sh to run it.
+
+🔍 Challenges
+
+I got confused trying to cd into start.sh, but I now understand the difference between files and folders.
+
+I also learned how to properly edit and save .sh files in VS Code.
+
+Notes to My Future Self
+
+Always use >> if you want to keep previous log entries.
+
+Use code filename to open a file in VS Code quickly.
+
+Make sure to run shell scripts from the correct directory with ./filename.sh.
