@@ -86,3 +86,84 @@ Don’t panic if files don’t show up — use VS Code’s File → Open Folder 
 Use ls to list files and confirm your structure.
 
 Be patient — everything is learnable!
+
+## 📅 Day 3 – Linux Navigation & File Viewing (June 18, 2025)
+
+### ✅ What I Learned Today
+Today I learned how to move around the Linux file system using commands like `pwd`, `cd`, `ls`, and `ls -a`. I now understand how to check where I am in the system, how to go up one level (`cd ..`), and how to explore contents in a folder.
+
+I also learned how to view and inspect files using:
+- `cat` to display entire files
+- `less` to scroll through long files
+- `head` and `tail` to preview top/bottom lines
+- `>>` to append new content to logs (like `debug.log`)
+
+This gave me real confidence for working inside a Linux server environment.
+
+---
+
+### ⌨️ Commands Practiced
+
+```bash
+pwd
+ls
+ls -l
+ls -a
+cd scripts
+cd ..
+cd logs
+cd ../configs
+cd ~
+cd -
+cat README.md
+less README.md
+head README.md
+tail README.md
+echo "Error: service failed to start" >> logs/debug.log
+cat logs/debug.log
+
+
+🧠 Quiz Reflections
+Q1: What command shows your current working directory?
+A1: pwd
+
+Q2: How do you go one level up in the directory tree?
+A2: cd ..
+
+Q3: What does ls -a show that ls does not?
+A3: Hidden files (like .git and .bashrc)
+
+Q4:
+
+a: Use head to see the first few lines of a file
+
+b: Use less to view a file page-by-page
+
+c: Use >> filename to append to a file
+
+Q5: What’s the difference between cat and less?
+A5: cat shows everything at once, while less lets you scroll page-by-page.
+
+🔍 Challenges / Confusions
+At first, I didn’t see some of the folders in my file explorer, but I now understand how to check file visibility and navigate better.
+
+I also learned how Git tracks modified files and how to focus my commits properly.
+
+✍️ Notes to My Future Self
+Always use pwd and ls to confirm where you are before making changes.
+
+Use >> carefully — it appends without confirmation.
+
+Don’t rush through terminal navigation — it’s the foundation of DevOps!
+
+
+---
+
+### ✅ Once You’ve Updated the File:
+
+1. Save the file in VS Code.  
+2. Run:
+```bash
+git add devops-journal.md
+git commit -m "Day 3 journal entry"
+git push
