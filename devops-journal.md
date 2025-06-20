@@ -98,3 +98,51 @@ git push                         # Push to remote repository
 
 ---
 
+📅 DevOps Learning Progress – June 20, 2025
+✅ What I Learned Today
+Today was all about permissions, shell scripting, and transitioning fully into the Linux-native environment (WSL):
+
+Learned the difference between Git Bash and Linux-native terminal — now working in a true Linux shell, which supports commands like chmod +x.
+
+Practiced file permission changes using:
+
+bash
+Copy
+chmod +x hello.sh   # make script executable
+chmod -x hello.sh   # remove execute permission
+Understood file permission output from ls -l and how execution rights are reflected.
+
+Successfully reinitialized Git inside the new Linux folder and connected it to GitHub using rebase and token-based authentication.
+
+Learned to handle and troubleshoot non-fast-forward, 403, and rebase issues with a custom-made cheat sheet for real-world Git troubleshooting.
+
+⌨️ Commands Practiced
+bash
+Copy
+chmod +x hello.sh
+chmod -x hello.sh
+ls -l
+git init
+git remote add origin <repo-url>
+git pull origin main --rebase
+git push origin main
+🧠 Reflections & Troubleshooting Summary
+Encountered Git push error due to non-fast-forward and token permission issues.
+
+Used git pull --rebase and learned to rebase, continue, and push changes cleanly.
+
+Understood the importance of generating and assigning the right GitHub token scopes (e.g., repo, workflow, read:org).
+
+Maintained a Markdown cheat sheet (Troubleshooting My Journey in DevOps Learning) to document every major problem and fix — building workplace confidence.
+
+✍️ Notes to My Future Self
+Always work in Linux-native terminal when dealing with real DevOps scripts.
+
+Use chmod to manage permissions — not all shells (e.g., Git Bash) handle this accurately.
+
+For Git issues, refer to your cheat sheet before panicking.
+
+Rebase is powerful — it helps clean history but must be used carefully.
+
+Maintain your GitHub token securely and give it proper scopes.
+
