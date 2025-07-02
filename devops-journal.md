@@ -146,3 +146,78 @@ Rebase is powerful — it helps clean history but must be used carefully.
 
 Maintain your GitHub token securely and give it proper scopes.
 
+# 📅 Day 6 – July 1, 2025
+## 🧠 Focus: Bash Scripting – User Input & Variables
+
+---
+
+### ✅ What I Learned Today
+
+- How to accept user input using the `read` command.
+- How to use variables to store and recall user responses.
+- The use of string interpolation (e.g., `$name`) in output.
+- How to make Bash scripts interactive by prompting the user.
+- Reinforced `chmod +x` to make scripts executable in Linux.
+
+---
+
+### ⌨️ Commands Practiced
+
+```bash
+read variable_name      # Accept user input
+echo $variable_name     # Display variable content
+chmod +x file.sh        # Make a script executable
+./file.sh               # Run the script
+ Scripts Practiced
+
+🔹 Level 1 – Basic Greeting
+
+#!/bin/bash
+echo "What is your name?"
+read name
+echo "Hello, $name! Welcome to Day 6 of your DevOps journey!"
+🔹 Level 2 – Feeling Check-in
+
+#!/bin/bash
+echo "What is your name?"
+read name
+echo "How are you feeling today, $name?"
+read feeling
+echo "It's great that you're feeling $feeling today. Let's keep learning DevOps!"
+🔹 Level 3 – Project Status Reporter
+
+#!/bin/bash
+echo "What is your name?"
+read name
+echo "Which project are you reporting on?"
+read project
+echo "What is the project status? (in progress/completed/blocked)"
+read status
+
+echo ""
+echo "Hi $name! Here's your update:"
+echo "✅ Project \"$project\" has been $status. Great job!"
+
+
+
+✍️ Notes to My Future Self
+
+Always read input before using its value in echo.
+
+Typing $variable before reading it results in empty output.
+
+chmod +x is crucial for making your script runnable.
+
+Nano and Vim editors are now easier to use—remember CTRL+O to save, CTRL+X to exit.
+
+Try progressively building your scripts for confidence and clarity.
+
+🔄 ReflectionsS
+
+I initially echoed variables before reading them—caused blank values.
+
+I experimented and corrected my mistake using the right order.
+
+I feel more confident creating interactive Bash scripts.
+
+I want more challenges like this! They help me learn faster and retain more.
