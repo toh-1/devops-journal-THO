@@ -221,3 +221,89 @@ I experimented and corrected my mistake using the right order.
 I feel more confident creating interactive Bash scripts.
 
 I want more challenges like this! They help me learn faster and retain more.
+
+
+
+# 📘 DevOps Learning Journal  
+### 🗓️ Day 6 – Bonus Level 4: Advanced Conditional Script  
+**Date:** July 04, 2025  
+
+---
+
+## ✅ What I Learned Today
+- Practiced using `if`, `elif`, and `else` conditional logic in Bash scripts.
+- Learned how to collect and personalize user input with `read` and use variables within strings.
+- Fixed the `"expression recursion level exceeded"` error by extracting numeric values properly.
+- Created a more dynamic project escalation script with contextual responses based on user inputs.
+
+---
+
+## 💻 Script Summary: `escalate3_project.sh`
+
+```bash
+#!/bin/bash
+
+echo "What's your name?"
+read name
+
+echo "What project are you working on?"
+read project
+
+echo "Hi $name! What's the status of project \"$project\"? (in progress/completed/blocked)"
+read status
+
+if [[ "$status" == "completed" ]]; then
+  echo "🎉 Well done, $name! Project \"$project\" is complete!"
+
+elif [[ "$status" == "in progress" ]]; then
+  echo "⏳ Keep going, $name! You're making progress on \"$project\"!"
+
+elif [[ "$status" == "blocked" ]]; then
+  echo "How many days has \"$project\" been blocked? (e.g., 2 or 5 days)"
+  read days_input
+
+  # Extract just the numeric part from input like "3 days"
+  days=$(echo "$days_input" | grep -o '[0-9]\+')
+
+  if (( days < 4 )); then
+    echo "🧩 $name, it's only been $days days. Try resolving \"$project\" yourself first!"
+  else
+    echo "🚨 $name, $project has been blocked for $days days. Escalating to the manager."
+  fi
+
+else
+  echo "❗ Invalid project status entered."
+fi
+
+⌨️ Commands Practiced
+Command	Purpose
+read varname	Store user input in a variable
+if [[ "$var" == "value" ]]	Conditional check for a string
+grep -o '[0-9]\+'	Extract digits from a string
+chmod +x script.sh	Make script executable
+./script.sh	Run a Bash script
+
+✍️ Notes to My Future Self
+Always extract numeric input if performing calculations.
+
+Bash doesn’t understand “3 days” as a number — use grep to clean input.
+
+Double-quote variables like $project in echo to avoid bugs with multi-word inputs.
+
+Personalization makes output more friendly and engaging.
+
+📣 Bonus Thought
+This script could later be converted into a real team status tracker or integrated with Slack or email to notify stakeholders!
+
+✅ Outcome
+Successfully created a working project update script that handles multiple user scenarios. I'm getting better at building real-world shell utilities!
+
+sql
+Copy
+
+✅ Go ahead and copy this into your Markdown journal (`devops-journal.md`) and commit your changes with a descriptive message like:
+
+```bash
+git add devops-journal.md
+git commit -m "Add Day 6 Bonus Level 4: Advanced conditional script with numeric extraction"
+git push
