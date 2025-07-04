@@ -1,0 +1,11 @@
+
+if ! [[ "$score" =~ ^[0-9]+$ ]]; then
+  echo "Invalid input. Please enter a number only."
+  exit 1
+elif [ "$score" -gt 150 ] || [ "$score" -lt 0 ]; then
+  echo "Score must be between 0 and 150."
+  exit 1
+
+
+fi
+

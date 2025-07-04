@@ -230,6 +230,12 @@ I want more challenges like this! They help me learn faster and retain more.
 
 ---
 
+📔 DevOps Learning Journal – Day 7
+
+📅 Date: July 1, 2025
+
+📍 Location: ~/devops-journal-THO
+
 ## ✅ What I Learned Today
 - Practiced using `if`, `elif`, and `else` conditional logic in Bash scripts.
 - Learned how to collect and personalize user input with `read` and use variables within strings.
@@ -307,3 +313,60 @@ Copy
 git add devops-journal.md
 git commit -m "Add Day 6 Bonus Level 4: Advanced conditional script with numeric extraction"
 git push
+
+
+What I Learned Today
+Today was all about using conditional logic and building Bash scripts to evaluate numerical input (e.g., test scores):
+
+Practiced using if, elif, and else statements.
+
+Learned how to evaluate numeric ranges using operators like -ge, -lt, and -le.
+
+Designed a test score grader script with personalized messages based on the score.
+
+Practiced adding custom responses, e.g., “A+ – Promoted One Class Above Level!”
+
+⌨️ Commands Practiced
+bash
+Copy
+chmod +x grade_check.sh   # Make script executable
+./grade_check.sh          # Run the script
+nano grade_check.sh       # Edit the script
+💡 Bonus Concepts Learned
+Added input validation to check for non-numeric input.
+
+Used read to collect test score and user name.
+
+Practiced chaining conditions and branching logic based on user input.
+
+✍️ Sample Script
+bash
+Copy
+#!/bin/bash
+
+echo "Enter your test score (0-150):"
+read score
+
+if [ "$score" -gt 150 ]; then
+  echo "Grade: A+ – Promoted One Class Above Level!"
+elif [ "$score" -ge 90 ]; then
+  echo "Grade: A – Excellent!"
+elif [ "$score" -ge 70 ]; then
+  echo "Grade: C – Fair effort."
+elif [ "$score" -ge 60 ]; then
+  echo "Grade: D – Needs improvement."
+elif [ "$score" -ge 50 ]; then
+  echo "Grade: E – Please seek help and study more."
+else
+  echo "Grade: F – Repeat class!"
+fi
+🧠 Notes to My Future Self
+Bash uses -ge, -lt, etc., instead of >=, <, etc.
+
+Always add then after if or elif.
+
+Don’t forget to close with fi.
+
+Test different inputs to make sure all branches of the script work.
+
+Use chmod +x filename.sh before running any new script.
